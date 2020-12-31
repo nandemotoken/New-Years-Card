@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-  with open( "test.txt" , 'a') as f:
+  with open( "addresses.txt" , 'a') as f:
     try:
       f.writelines( request.args.get('address') + "\n" )
     except:
